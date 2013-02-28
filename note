@@ -1,0 +1,2 @@
+rails g model admin username:string first:string last:string pw:string email:string create_date:string last_login:string
+rails g model org name:text phone:string contact:string email:string
