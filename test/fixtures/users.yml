@@ -1,21 +1,43 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  siteadmin: false
-  username: MyString
-  pw: MyString
-  email: MyString
-  phone: MyString
+limin:
+  id: 100001
+  siteadmin: true
+  username: limin
+  pw: 77a0d943cdbace52716a9ef9fae12e45e2788d39
+  salt: 1000
+  email: limin@ms.com
+  phone: 18621717879
   last_login: 2013-03-05
   entry_date: 2013-03-05
-  note: MyText
+  first: Min
+  last: Li
+  note: This is Min Li
 
-two:
+limin2:
+  id: 100002
   siteadmin: false
-  username: MyString
-  pw: MyString
-  email: MyString
-  phone: MyString
+  username: limin2
+  pw: 77a0d943cdbace52716a9ef9fae12e45e2788d39
+  salt: 1000
+  email: limin2@ms.com
+  phone: 18621717879
   last_login: 2013-03-05
   entry_date: 2013-03-05
-  note: MyText
+  first: Min2
+  last: Li2
+  note: This is Min2 Li2
+
+limin3:
+  id: 100003
+  siteadmin: false
+  username: limin3
+  pw: 77a0d943cdbace52716a9ef9fae12e45e2788d39
+  salt: 1000
+  email: limin3@ms.com
+  phone: 18621717879
+  last_login: 2013-03-05
+  entry_date: 2013-03-05
+  first: Min3
+  last: Li3
+  note: This is Min3 Li3
