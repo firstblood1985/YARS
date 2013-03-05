@@ -1,2 +1,8 @@
 rails g model admin username:string first:string last:string pw:string salt:string email:string create_date:date last_login:date last_update:date
 rails g model org name:text phone:string contact:string email:string create_date:date last_update:date
+
+rails g model org name:string country:string city:string phone:string email:string entry_date:date last_update:date note:text
+
+rails g model user siteadmin:boolean username:string pw:string email:string phone:string last_login:date entry_date:date note:text
+
+rails g migration org_user
