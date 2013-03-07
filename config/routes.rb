@@ -1,4 +1,8 @@
 YARS::Application.routes.draw do
+  post 'user/login', :action=>'login', :controller=>'user'
+  get 'org/info', :as=>'org'
+  post 'user/add', :action=>'add',:controller=>'user'
+  get 'user/add', :as=>'new_user'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
