@@ -1,0 +1,5 @@
+module UserHelper
+	LOGINSUCCESSFUL = 0
+	USERNOTEXISTED = 1
+	PASSWORDWRONG = 2
+end
