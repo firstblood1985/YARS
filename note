@@ -14,3 +14,9 @@ what is mass assignment in RoR
 perform an update to @user object through params hash, assigning all the @user attributes at once -- that is, as a mass assignment
 
 rails g controller user
+
+rails g controller org
+
+rails g migration AdminTable
+
+use (has_many, through) to express many-to-many relationship

@@ -1,21 +1,34 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  country: MyString
-  city: MyString
-  phone: MyString
-  email: MyString
+  id: 100
+  name: Morgan Stanley
+  country: USA
+  city: New York City
+  phone: 111111111
+  email: limin@ms.com
   entry_date: 2013-03-05
   last_update: 2013-03-05
-  note: MyText
+  note: Morgan Stanley is top 2 investment banking in the world
 
 two:
-  name: MyString
-  country: MyString
-  city: MyString
-  phone: MyString
-  email: MyString
+  id: 101
+  name: Goldman Sachs
+  country: USA
+  city: New York City
+  phone: 222222222
+  email: limin@gs.com
   entry_date: 2013-03-05
   last_update: 2013-03-05
-  note: MyText
+  note: Goldman Sachs is top 1 investment banking in the world
+
+three:
+  id: 102
+  name: UBS
+  country: SWISS
+  city: New York City
+  phone: 333333333
+  email: limin@ubs.com
+  entry_date: 2013-03-05
+  last_update: 2013-03-05
+  note: UBS is top 3 investment banking in the world

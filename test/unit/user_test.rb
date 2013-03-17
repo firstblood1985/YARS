@@ -50,7 +50,11 @@ include UserHelper
  	u.email='123456'
  	assert u.invalid?
  	assert u.errors[:email].any?
- 	#test for valid username
+ 	#test for uniqueness of username
+ 	u.email = 'limin@ms.com'
+ 	assert u.invalid?
+ 	assert u.errors[:email].any?
+
  	u.email='limin4@ms.com'
  	#assert u.errors.empty?
  	assert u.valid?
@@ -80,13 +84,12 @@ include UserHelper
  	assert u.valid?
  end
 
- def test_invalid_salt
+ def test_valid_salt
  	u=User.new
  	u.username = 'limin4'
  	u.email = 'limin4@ms.com'
- 	u.password = u.password_confirmation='test'
- 	assert u.invalid?
- 	assert u.errors[:salt].any?
+ 	u.password= u.password_confirmation='test'
+ 	assert u.valid?
  end
  def test_authenticate
  	u = User.find(:first,:conditions=>['username=?','limin'])
@@ -95,6 +98,57 @@ include UserHelper
  	assert_equal UserHelper::PASSWORDWRONG, User.authenticate('limin','abc')
  	u2 = User.authenticate('limin','test')
  	assert_equal u.username, u2.username
-
  end	
+ def test_find_user_by_with_valid_id
+ 	u = User.find_user_by('id',100001)
+
+ 	assert_equal u.username, 'limin'	
+ end
+ def test_find_user_by_with_invalid_id
+ 	u = User.find_user_by('id',123)	
+ 	assert_equal u, UserHelper::USERNOTEXISTED
+ end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

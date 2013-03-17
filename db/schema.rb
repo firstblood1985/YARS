@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130305141819) do
+ActiveRecord::Schema.define(:version => 20130312160456) do
+
+  create_table "admins", :id => false, :force => true do |t|
+    t.integer "org_id"
+    t.integer "user_id"
+    t.boolean "admin"
+  end
+
+  add_index "admins", ["org_id", "user_id"], :name => "index_admins_on_org_id_and_user_id"
 
   create_table "orgs", :force => true do |t|
     t.string   "name"
